@@ -6,6 +6,7 @@ public class Player : MonoBehaviour {
 
 	public float maxRunSpeed;
 	public float acceleration;
+	public float accerleationOnJump;
 	public float rightDirection;
 
 	public float jumpForce;
@@ -34,13 +35,15 @@ public class Player : MonoBehaviour {
 		} else {
 			grounded = true;
 		}
+		float acc = acceleration;
+		if (!grounded) {
+			acc = accerleationOnJump;
+		}
 		if (Input.GetKey (KeyCode.D)) {
-			if(grounded)
-				GetComponent<Rigidbody> ().AddForce ((1 - (Mathf.Max(curSpeed, 0)/maxRunSpeed)) * acceleration, 0, 0);
+			GetComponent<Rigidbody> ().AddForce ((1 - (Mathf.Max(curSpeed, 0)/maxRunSpeed)) * acc, 0, 0);
 		}
 		if (Input.GetKey (KeyCode.A)) {
-			if(grounded)
-				GetComponent<Rigidbody> ().AddForce ((1 - Mathf.Max(-curSpeed, 0)/maxRunSpeed) * acceleration * -1, 0, 0);
+			GetComponent<Rigidbody> ().AddForce ((1 - Mathf.Max(-curSpeed, 0)/maxRunSpeed) * acc * -1, 0, 0);
 		}
 		if (Input.GetKey (KeyCode.W)) {
 			if (grounded && (Time.time - lastJump) > jumpDelay) {
