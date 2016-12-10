@@ -9,6 +9,7 @@ public class Dart : MonoBehaviour {
 
 	public float speed;
 	public int direction;
+	public int yDirection = 0;
 
 	float collisionTime;
 	public float deleteAfterCollision;
@@ -17,10 +18,10 @@ public class Dart : MonoBehaviour {
 	void OnCollisionEnter(Collision coll){
 		Debug.Log (coll.collider.name);
 		if (!collided) {
-			if (coll.other.GetComponent<Player> ()) {
-				coll.other.GetComponent<Player> ().die ();
+			if (coll.collider.GetComponent<Player> ()) {
+				coll.collider.GetComponent<Player> ().die ();
 				Destroy (gameObject);
-			} else if(coll.other.gameObject != source) {
+			} else if(coll.collider.gameObject != source) {
 				collided = true;
 				collisionTime = Time.time;
 				Destroy (gameObject);
@@ -31,14 +32,18 @@ public class Dart : MonoBehaviour {
 	void Start(){
 		if (direction == 1) {
 			transform.rotation = Quaternion.Euler (90, 90, 180);
-		} else {
+		} else if (direction == -1) {
 			transform.rotation = Quaternion.Euler (90, 90, 0);
+		} else if (yDirection == 1) {
+			transform.rotation = Quaternion.Euler (0, 90, 0);
+		} else if (yDirection == -1) {
+			transform.rotation = Quaternion.Euler (180, 90, 0);
 		}
 	}
 
 	void Update(){
 		if (!collided) {
-			this.transform.position += new Vector3 (speed * direction * Time.deltaTime, 0, 0);
+			this.transform.position += new Vector3 (speed * direction * Time.deltaTime, speed * yDirection * Time.deltaTime, 0);
 		} else {
 			if (collisionTime + deleteAfterCollision > Time.time) {
 				Destroy (gameObject);
