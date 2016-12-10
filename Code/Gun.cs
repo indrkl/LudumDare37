@@ -19,6 +19,7 @@ public class Gun : Obstacle {
 			counter++;
 			Dart dart = Instantiate (GameMaster.instance.dartPrefab);
 			dart.transform.position = transform.position;
+			dart.transform.position += new Vector3 (direction * 0.5f, 0, 0);
 			dart.direction = direction;
 			dart.source = this.gameObject;
 		}

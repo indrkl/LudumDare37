@@ -15,11 +15,12 @@ public class Dart : MonoBehaviour {
 
 
 	void OnCollisionEnter(Collision coll){
+		Debug.Log (coll.collider.name);
 		if (!collided) {
 			if (coll.other.GetComponent<Player> ()) {
 				coll.other.GetComponent<Player> ().die ();
 				Destroy (gameObject);
-			} else if(coll.gameObject != source) {
+			} else if(coll.other.gameObject != source) {
 				collided = true;
 				collisionTime = Time.time;
 				Destroy (gameObject);
