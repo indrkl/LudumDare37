@@ -7,6 +7,8 @@ public class GameMaster : MonoBehaviour {
 	public int maxLevel;
 	public int curLevel;
 
+	public float gravity;
+
 	public Player player;
 	public Transform playerSpawn;
 
@@ -52,5 +54,6 @@ public class GameMaster : MonoBehaviour {
 
 	void Start(){
 		InitializeGame ();
+		Physics.gravity = new Vector3 (0, gravity, 0);
 	}
 }
