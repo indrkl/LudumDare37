@@ -30,6 +30,7 @@ public class Player : MonoBehaviour {
 		float curSpeed = GetComponent<Rigidbody> ().velocity.x;
 		float verticalSpeed = GetComponent<Rigidbody> ().velocity.y;
 		float verticalDiff = Mathf.Abs (verticalSpeed - lastVerticalSpeed);
+		bool moving = false;
 		lastVerticalSpeed = verticalSpeed;
 		if (verticalDiff > verticalSensitivity || Mathf.Abs(verticalSpeed) > verticalSensitivity) {
 			grounded = false;
@@ -42,8 +43,14 @@ public class Player : MonoBehaviour {
 		}
 		if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) {
 			GetComponent<Rigidbody> ().AddForce ((1 - (Mathf.Max(curSpeed, 0)/maxRunSpeed)) * acc, 0, 0);
+			moving = true;
 		}
 		if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) {
+			GetComponent<Rigidbody> ().AddForce ((1 - Mathf.Max(-curSpeed, 0)/maxRunSpeed) * acc * -1, 0, 0);
+			moving = true;
+		}
+		if (!moving) {
+			GetComponent<Rigidbody> ().AddForce ((1 - (Mathf.Max(curSpeed, 0)/maxRunSpeed)) * acc, 0, 0);
 			GetComponent<Rigidbody> ().AddForce ((1 - Mathf.Max(-curSpeed, 0)/maxRunSpeed) * acc * -1, 0, 0);
 		}
 
