@@ -26,6 +26,10 @@ public class GameMaster : MonoBehaviour {
 		deathCounter = 0;
 		curLevel = 1;
 		StartLevel (maxLevel);
+		obstacles.RemoveRange (0, obstacles.Count);
+		foreach (Obstacle o in GameObject.FindObjectsOfType(typeof(Obstacle))) {
+			obstacles.Add (o);
+		}
 	}
 
 	public void StartLevel(int levelNumber){

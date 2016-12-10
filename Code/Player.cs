@@ -40,13 +40,14 @@ public class Player : MonoBehaviour {
 		if (!grounded) {
 			acc = accerleationOnJump;
 		}
-		if (Input.GetKey (KeyCode.D)) {
+		if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) {
 			GetComponent<Rigidbody> ().AddForce ((1 - (Mathf.Max(curSpeed, 0)/maxRunSpeed)) * acc, 0, 0);
 		}
-		if (Input.GetKey (KeyCode.A)) {
+		if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) {
 			GetComponent<Rigidbody> ().AddForce ((1 - Mathf.Max(-curSpeed, 0)/maxRunSpeed) * acc * -1, 0, 0);
 		}
-		if (Input.GetKey (KeyCode.W)) {
+
+		if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) {
 			if (grounded && (Time.time - lastJump) > jumpDelay) {
 				GetComponent<Rigidbody> ().AddForce (0, jumpForce, 0);
 				lastJump = Time.time;
