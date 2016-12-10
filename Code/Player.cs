@@ -49,4 +49,8 @@ public class Player : MonoBehaviour {
 			}
 		}
 	}
+
+	public void die(){
+		GameMaster.instance.OnDeath ();
+	}
 }

@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class GameMaster : MonoBehaviour {
 
+	public static GameMaster instance;
+
+	public Dart dartPrefab;
+
+	void Awake(){
+		instance = this;
+	}
+
 	public int maxLevel;
 	public int curLevel;
 
@@ -30,6 +38,7 @@ public class GameMaster : MonoBehaviour {
 		}
 
 		player.transform.position = playerSpawn.position;
+		player.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 	}
 
 	public int deathCounter;
