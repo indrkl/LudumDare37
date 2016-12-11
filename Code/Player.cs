@@ -62,6 +62,10 @@ public class Player : MonoBehaviour {
 				GetComponent<Rigidbody> ().AddForce (0, jumpExtraAcceleration, 0);
 			}
 		}
+
+		if (transform.position.y < -100) {
+			die ();
+		}
 	}
 
 	public void die(){
