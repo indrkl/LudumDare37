@@ -34,18 +34,20 @@ public class PressurePlate : Obstacle {
 
 	}
 
-	Vector3 startScale;
+	Vector3 startPos;
+	Vector3 targetPos;
 
 	void Start(){
-		startScale = plate.transform.localScale;
+		startPos = plate.transform.position;
+		targetPos = startPos - new Vector3 (0, 0.1f, 0);
 
 	}
 
 	void Update(){
 		if (isPressured || (lastTriggerTime + triggerDelay) > Time.time) {
-			plate.transform.localScale = Vector3.Lerp (plate.transform.localScale, new Vector3 (plate.transform.localScale.x, 0.01f, plate.transform.localScale.z), 0.1f);
+			plate.transform.position = Vector3.Lerp (plate.transform.position,targetPos, 0.1f);
 		} else {
-			plate.transform.localScale = Vector3.Lerp (plate.transform.localScale, startScale, 0.1f);
+			plate.transform.position = Vector3.Lerp (plate.transform.position, startPos, 0.1f);
 		}
 	}
 
