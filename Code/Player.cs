@@ -7,10 +7,13 @@ public class Player : MonoBehaviour {
 	public float crouchHeight;
 	public float standHeight;
 
+	public Animator anim;
+
 	bool isCrounching = false;
 
 	public AudioClip jump;
 	public AudioClip drop;
+	public AudioClip runningClip;
 
 	public Transform ninja;
 
@@ -23,6 +26,7 @@ public class Player : MonoBehaviour {
 	public float jumpForce;
 	public float jumpDelay;
 	float lastJump = 0;
+	public bool running = false;
 
 	public float verticalSensitivity;
 
@@ -72,6 +76,28 @@ public class Player : MonoBehaviour {
 			GetComponent<Rigidbody> ().AddForce ((1 - Mathf.Max(-curSpeed, 0)/maxRunSpeed) * acc * -1, 0, 0);
 		}
 
+		if ((moving && grounded) && !running) {
+			running = true;
+			if(anim)
+				anim.SetBool ("running", running);
+			if (runningClip && GetComponent<AudioSource> ()) {
+				GetComponent<AudioSource> ().clip = runningClip;
+				GetComponent<AudioSource> ().loop = true;
+				GetComponent<AudioSource> ().Play ();
+			}
+				
+		}
+		if ((!moving || !grounded) && running) {
+			running = false;
+			if (anim)
+				anim.SetBool ("running", running);
+			if (GetComponent<AudioSource> ()) {
+				GetComponent<AudioSource> ().loop = false;
+				if (GetComponent<AudioSource> ().clip == runningClip)
+					GetComponent<AudioSource> ().Stop ();
+			}
+		}
+
 		if (Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.DownArrow)) {
 			if (!isCrounching) {
 				isCrounching = true;
@@ -96,6 +122,7 @@ public class Player : MonoBehaviour {
 				lastJump = Time.time;
 				if (jump) {
 					GetComponent<AudioSource> ().clip = jump;
+					GetComponent<AudioSource> ().loop = false;
 					GetComponent<AudioSource> ().Play ();
 				}
 			} else {
@@ -108,7 +135,19 @@ public class Player : MonoBehaviour {
 		}
 	}
 
-	public void die(){
+	public void die(AudioClip deathClip = null){
 		GameMaster.instance.OnDeath ();
+		if (anim)
+			anim.SetBool ("death", true);
+		if (deathClip && GetComponent<AudioSource> ()) {
+			GetComponent<AudioSource> ().clip = deathClip;
+			GetComponent<AudioSource> ().loop = false;
+			GetComponent<AudioSource> ().Play ();
+		}
+	}
+
+	public void resurrectPlayer(){
+		if (anim)
+			anim.SetBool ("death", false);
 	}
 }

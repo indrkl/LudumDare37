@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour {
 
@@ -25,7 +26,7 @@ public class GameMaster : MonoBehaviour {
 	public void InitializeGame (){
 		deathCounter = 0;
 		curLevel = 1;
-		StartLevel (maxLevel, true);
+		StartLevel (maxLevel-1, true);
 		obstacles.RemoveRange (0, obstacles.Count);
 		foreach (Obstacle o in GameObject.FindObjectsOfType(typeof(Obstacle))) {
 			obstacles.Add (o);
@@ -33,6 +34,7 @@ public class GameMaster : MonoBehaviour {
 	}
 
 	public void StartLevel(int levelNumber, bool startMaxLevel = false){
+		
 		foreach(Obstacle o in obstacles){
 			if (o.fromLevel <= levelNumber) {
 				o.gameObject.SetActive (true);
@@ -54,13 +56,27 @@ public class GameMaster : MonoBehaviour {
 		} else {
 			AudioController.instance.playStartMaxLevel ();
 		}
+		if (levelNumber == maxLevel) {
+			InitializeBlindMode ();
+		}
 	}
 
 	public int deathCounter;
 
 	public void OnDeath(){
 		deathCounter++;
+		StartCoroutine (startLevelInSecs (2.0f));
+	}
+
+	public IEnumerator startLevelInSecs(float seconds){
+		yield return new WaitForSeconds (seconds);
 		StartLevel (curLevel);
+	}
+
+	public GameObject BlindModeScreenBlocker;
+
+	public void InitializeBlindMode(){
+		BlindModeScreenBlocker.SetActive (true);
 	}
 
 	public void OnSuccess(){
@@ -72,8 +88,10 @@ public class GameMaster : MonoBehaviour {
 		}
 	}
 
-	public void WinGame(){
+	public string creditsScreen;
 
+	public void WinGame(){
+		SceneManager.LoadScene (creditsScreen);
 	}
 
 	void Start(){
