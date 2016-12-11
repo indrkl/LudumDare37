@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+	public float crouchHeight;
+	public float standHeight;
+
+	bool isCrounching = false;
+
 	public AudioClip jump;
 	public AudioClip drop;
+
+	public Transform ninja;
 
 	public float maxRunSpeed;
 	public float acceleration;
@@ -45,14 +52,18 @@ public class Player : MonoBehaviour {
 			grounded = true;
 		}
 		float acc = acceleration;
+		bool left = false;
+		bool right = false;
 		if (!grounded) {
 			acc = accerleationOnJump;
 		}
 		if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) {
+			right = true;
 			GetComponent<Rigidbody> ().AddForce ((1 - (Mathf.Max(curSpeed, 0)/maxRunSpeed)) * acc, 0, 0);
 			moving = true;
 		}
 		if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) {
+			left = true;
 			GetComponent<Rigidbody> ().AddForce ((1 - Mathf.Max(-curSpeed, 0)/maxRunSpeed) * acc * -1, 0, 0);
 			moving = true;
 		}
@@ -60,6 +71,24 @@ public class Player : MonoBehaviour {
 			GetComponent<Rigidbody> ().AddForce ((1 - (Mathf.Max(curSpeed, 0)/maxRunSpeed)) * acc, 0, 0);
 			GetComponent<Rigidbody> ().AddForce ((1 - Mathf.Max(-curSpeed, 0)/maxRunSpeed) * acc * -1, 0, 0);
 		}
+
+		if (Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.DownArrow)) {
+			if (!isCrounching) {
+				isCrounching = true;
+				GetComponent<CapsuleCollider> ().height = crouchHeight;
+			}
+		} else if(isCrounching) {
+			GetComponent<CapsuleCollider> ().height = standHeight;
+			isCrounching = false;
+		}
+
+		if (right && !left) {
+			ninja.localRotation = Quaternion.Euler (0, 90, 0);
+		}
+		if (left && !right) {
+			ninja.localRotation = Quaternion.Euler (0, 270, 0);
+		}
+
 
 		if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) {
 			if (grounded && (Time.time - lastJump) > jumpDelay) {
