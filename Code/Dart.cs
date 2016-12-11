@@ -41,6 +41,8 @@ public class Dart : MonoBehaviour {
 		}
 	}
 
+	bool whoosh = false;
+
 	void Update(){
 		if (!collided) {
 			this.transform.position += new Vector3 (speed * direction * Time.deltaTime, speed * yDirection * Time.deltaTime, 0);
@@ -48,6 +50,12 @@ public class Dart : MonoBehaviour {
 			if (collisionTime + deleteAfterCollision > Time.time) {
 				Destroy (gameObject);
 			}
+		}
+		float dist = Mathf.Abs (GameMaster.instance.player.transform.position.x - transform.position.x);
+		if (dist < 5 && !whoosh) {
+			if (GetComponent<AudioSource> ())
+				GetComponent<AudioSource> ().Play ();
+			whoosh = true;
 		}
 	}
 }

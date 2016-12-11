@@ -80,4 +80,10 @@ public class GameMaster : MonoBehaviour {
 		InitializeGame ();
 		Physics.gravity = new Vector3 (0, gravity, 0);
 	}
+
+	void Update(){
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			Application.Quit ();
+		}
+	}
 }

@@ -31,7 +31,9 @@ public class PressurePlate : Obstacle {
 	}
 
 	public void trigger(){
-
+		if (GetComponent<AudioSource> ()) {
+			GetComponent<AudioSource> ().Play ();
+		}
 	}
 
 	Vector3 startPos;
