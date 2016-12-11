@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Dart : MonoBehaviour {
+	public AudioClip deathClip;
 
 	public GameObject source;
 	public bool collided = false;
@@ -19,7 +20,7 @@ public class Dart : MonoBehaviour {
 		Debug.Log (coll.collider.name);
 		if (!collided) {
 			if (coll.collider.GetComponent<Player> ()) {
-				coll.collider.GetComponent<Player> ().die ();
+				coll.collider.GetComponent<Player> ().die (deathClip);
 				Destroy (gameObject);
 			} else if(coll.collider.gameObject != source) {
 				collided = true;

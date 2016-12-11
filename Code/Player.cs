@@ -41,99 +41,109 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float curSpeed = GetComponent<Rigidbody> ().velocity.x;
-		float verticalSpeed = GetComponent<Rigidbody> ().velocity.y;
-		float verticalDiff = Mathf.Abs (verticalSpeed - lastVerticalSpeed);
-		bool moving = false;
-		lastVerticalSpeed = verticalSpeed;
-		if (verticalDiff > verticalSensitivity || Mathf.Abs(verticalSpeed) > verticalSensitivity) {
-			grounded = false;
-		} else if (!grounded) {
-			if (drop) {
-				GetComponent<AudioSource> ().clip = drop;
-				GetComponent<AudioSource> ().Play ();
+		if (!dead) {
+			float curSpeed = GetComponent<Rigidbody> ().velocity.x;
+			float verticalSpeed = GetComponent<Rigidbody> ().velocity.y;
+			float verticalDiff = Mathf.Abs (verticalSpeed - lastVerticalSpeed);
+			bool moving = false;
+			lastVerticalSpeed = verticalSpeed;
+			if (verticalDiff > verticalSensitivity || Mathf.Abs (verticalSpeed) > verticalSensitivity) {
+				grounded = false;
+			} else if (!grounded) {
+				if (drop) {
+					GetComponent<AudioSource> ().clip = drop;
+					GetComponent<AudioSource> ().Play ();
+					if (anim)
+						anim.SetBool ("jump", false);
+				}
+				grounded = true;
 			}
-			grounded = true;
-		}
-		float acc = acceleration;
-		bool left = false;
-		bool right = false;
-		if (!grounded) {
-			acc = accerleationOnJump;
-		}
-		if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) {
-			right = true;
-			GetComponent<Rigidbody> ().AddForce ((1 - (Mathf.Max(curSpeed, 0)/maxRunSpeed)) * acc, 0, 0);
-			moving = true;
-		}
-		if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) {
-			left = true;
-			GetComponent<Rigidbody> ().AddForce ((1 - Mathf.Max(-curSpeed, 0)/maxRunSpeed) * acc * -1, 0, 0);
-			moving = true;
-		}
-		if (!moving) {
-			GetComponent<Rigidbody> ().AddForce ((1 - (Mathf.Max(curSpeed, 0)/maxRunSpeed)) * acc, 0, 0);
-			GetComponent<Rigidbody> ().AddForce ((1 - Mathf.Max(-curSpeed, 0)/maxRunSpeed) * acc * -1, 0, 0);
-		}
-
-		if ((moving && grounded) && !running) {
-			running = true;
-			if(anim)
-				anim.SetBool ("running", running);
-			if (runningClip && GetComponent<AudioSource> ()) {
-				GetComponent<AudioSource> ().clip = runningClip;
-				GetComponent<AudioSource> ().loop = true;
-				GetComponent<AudioSource> ().Play ();
+			float acc = acceleration;
+			bool left = false;
+			bool right = false;
+			if (!grounded) {
+				acc = accerleationOnJump;
 			}
-				
-		}
-		if ((!moving || !grounded) && running) {
-			running = false;
-			if (anim)
-				anim.SetBool ("running", running);
-			if (GetComponent<AudioSource> ()) {
-				GetComponent<AudioSource> ().loop = false;
-				if (GetComponent<AudioSource> ().clip == runningClip)
-					GetComponent<AudioSource> ().Stop ();
+			if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) {
+				right = true;
+				GetComponent<Rigidbody> ().AddForce ((1 - (Mathf.Max (curSpeed, 0) / maxRunSpeed)) * acc, 0, 0);
+				moving = true;
 			}
-		}
-
-		if (Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.DownArrow)) {
-			if (!isCrounching) {
-				isCrounching = true;
-				GetComponent<CapsuleCollider> ().height = crouchHeight;
+			if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) {
+				left = true;
+				GetComponent<Rigidbody> ().AddForce ((1 - Mathf.Max (-curSpeed, 0) / maxRunSpeed) * acc * -1, 0, 0);
+				moving = true;
 			}
-		} else if(isCrounching) {
-			GetComponent<CapsuleCollider> ().height = standHeight;
-			isCrounching = false;
-		}
+			if (!moving) {
+				GetComponent<Rigidbody> ().AddForce ((1 - (Mathf.Max (curSpeed, 0) / maxRunSpeed)) * acc, 0, 0);
+				GetComponent<Rigidbody> ().AddForce ((1 - Mathf.Max (-curSpeed, 0) / maxRunSpeed) * acc * -1, 0, 0);
+			}
 
-		if (right && !left) {
-			ninja.localRotation = Quaternion.Euler (0, 90, 0);
-		}
-		if (left && !right) {
-			ninja.localRotation = Quaternion.Euler (0, 270, 0);
-		}
-
-
-		if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) {
-			if (grounded && (Time.time - lastJump) > jumpDelay) {
-				GetComponent<Rigidbody> ().AddForce (0, jumpForce, 0);
-				lastJump = Time.time;
-				if (jump) {
-					GetComponent<AudioSource> ().clip = jump;
-					GetComponent<AudioSource> ().loop = false;
+			if ((moving && grounded) && !running) {
+				running = true;
+				if (anim)
+					anim.SetBool ("running", running);
+				if (runningClip && GetComponent<AudioSource> ()) {
+					GetComponent<AudioSource> ().clip = runningClip;
+					GetComponent<AudioSource> ().loop = true;
 					GetComponent<AudioSource> ().Play ();
 				}
-			} else {
-				GetComponent<Rigidbody> ().AddForce (0, jumpExtraAcceleration, 0);
+				
 			}
-		}
+			if ((!moving || !grounded) && running) {
+				running = false;
+				if (anim)
+					anim.SetBool ("running", running);
+				if (GetComponent<AudioSource> ()) {
+					GetComponent<AudioSource> ().loop = false;
+					if (GetComponent<AudioSource> ().clip == runningClip)
+						GetComponent<AudioSource> ().Stop ();
+				}
+			}
 
-		if (transform.position.y < -100) {
-			die ();
+			if (Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.DownArrow)) {
+				if (!isCrounching) {
+					isCrounching = true;
+					GetComponent<CapsuleCollider> ().height = crouchHeight;
+				}
+			} else if (isCrounching) {
+				GetComponent<CapsuleCollider> ().height = standHeight;
+				isCrounching = false;
+			}
+
+			if (right && !left) {
+				ninja.localRotation = Quaternion.Euler (0, 90, 0);
+			}
+			if (left && !right) {
+				ninja.localRotation = Quaternion.Euler (0, 270, 0);
+			}
+
+
+			if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) {
+				if (grounded && (Time.time - lastJump) > jumpDelay) {
+					GetComponent<Rigidbody> ().AddForce (0, jumpForce, 0);
+					lastJump = Time.time;
+					if (jump) {
+						if (anim)
+							anim.SetBool ("jump", true);
+						GetComponent<AudioSource> ().clip = jump;
+						GetComponent<AudioSource> ().loop = false;
+						GetComponent<AudioSource> ().Play ();
+					}
+				} else {
+					GetComponent<Rigidbody> ().AddForce (0, jumpExtraAcceleration, 0);
+				}
+			}
+
+			if (transform.position.y < -100) {
+				die ();
+			}
+		} else {
+			GetComponent<Rigidbody> ().AddForce ((1 - (Mathf.Max(curSpeed, 0)/maxRunSpeed)) * acc, 0, 0);
+			GetComponent<Rigidbody> ().AddForce ((1 - Mathf.Max(-curSpeed, 0)/maxRunSpeed) * acc * -1, 0, 0);
 		}
 	}
+	bool dead = false;
 
 	public void die(AudioClip deathClip = null){
 		GameMaster.instance.OnDeath ();
@@ -144,10 +154,12 @@ public class Player : MonoBehaviour {
 			GetComponent<AudioSource> ().loop = false;
 			GetComponent<AudioSource> ().Play ();
 		}
+		dead = true;
 	}
 
 	public void resurrectPlayer(){
 		if (anim)
 			anim.SetBool ("death", false);
+		dead = false;
 	}
 }

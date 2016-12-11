@@ -34,7 +34,7 @@ public class GameMaster : MonoBehaviour {
 	}
 
 	public void StartLevel(int levelNumber, bool startMaxLevel = false){
-		
+		player.resurrectPlayer ();
 		foreach(Obstacle o in obstacles){
 			if (o.fromLevel <= levelNumber) {
 				o.gameObject.SetActive (true);
