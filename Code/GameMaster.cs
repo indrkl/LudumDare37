@@ -25,14 +25,14 @@ public class GameMaster : MonoBehaviour {
 	public void InitializeGame (){
 		deathCounter = 0;
 		curLevel = 1;
-		StartLevel (maxLevel);
+		StartLevel (maxLevel, true);
 		obstacles.RemoveRange (0, obstacles.Count);
 		foreach (Obstacle o in GameObject.FindObjectsOfType(typeof(Obstacle))) {
 			obstacles.Add (o);
 		}
 	}
 
-	public void StartLevel(int levelNumber){
+	public void StartLevel(int levelNumber, bool startMaxLevel = false){
 		foreach(Obstacle o in obstacles){
 			if (o.fromLevel <= levelNumber) {
 				o.gameObject.SetActive (true);
@@ -48,6 +48,12 @@ public class GameMaster : MonoBehaviour {
 
 		player.transform.position = playerSpawn.position;
 		player.GetComponent<Rigidbody> ().velocity = Vector3.zero;
+
+		if (!startMaxLevel) {
+			AudioController.instance.startLevel (levelNumber);
+		} else {
+			AudioController.instance.playStartMaxLevel ();
+		}
 	}
 
 	public int deathCounter;
@@ -73,5 +79,11 @@ public class GameMaster : MonoBehaviour {
 	void Start(){
 		InitializeGame ();
 		Physics.gravity = new Vector3 (0, gravity, 0);
+	}
+
+	void Update(){
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			Application.Quit ();
+		}
 	}
 }

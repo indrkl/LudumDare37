@@ -17,6 +17,8 @@ public class Gun : Obstacle {
 
 	void Update(){
 		if (startTime + interval * counter <= Time.time) {
+			if (GetComponent<AudioSource> ())
+				GetComponent<AudioSource> ().Play ();
 			counter++;
 			Dart dart = Instantiate (GameMaster.instance.dartPrefab);
 			dart.transform.position = transform.position;
