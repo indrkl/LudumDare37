@@ -12,6 +12,7 @@ public class Gun : Obstacle {
 	public override void atStart ()
 	{
 		startTime = Time.time;
+		counter = 0;
 	}
 
 	void Update(){

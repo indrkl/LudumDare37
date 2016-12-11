@@ -36,6 +36,7 @@ public class GameMaster : MonoBehaviour {
 		foreach(Obstacle o in obstacles){
 			if (o.fromLevel <= levelNumber) {
 				o.gameObject.SetActive (true);
+				o.atStart ();
 			} else {
 				o.gameObject.SetActive (false);
 			}
