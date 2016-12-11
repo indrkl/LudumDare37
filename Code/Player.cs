@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+	public AudioClip jump;
+	public AudioClip drop;
+
 	public float maxRunSpeed;
 	public float acceleration;
 	public float accerleationOnJump;
@@ -34,7 +37,11 @@ public class Player : MonoBehaviour {
 		lastVerticalSpeed = verticalSpeed;
 		if (verticalDiff > verticalSensitivity || Mathf.Abs(verticalSpeed) > verticalSensitivity) {
 			grounded = false;
-		} else {
+		} else if (!grounded) {
+			if (drop) {
+				GetComponent<AudioSource> ().clip = drop;
+				GetComponent<AudioSource> ().Play ();
+			}
 			grounded = true;
 		}
 		float acc = acceleration;
@@ -58,6 +65,10 @@ public class Player : MonoBehaviour {
 			if (grounded && (Time.time - lastJump) > jumpDelay) {
 				GetComponent<Rigidbody> ().AddForce (0, jumpForce, 0);
 				lastJump = Time.time;
+				if (jump) {
+					GetComponent<AudioSource> ().clip = jump;
+					GetComponent<AudioSource> ().Play ();
+				}
 			} else {
 				GetComponent<Rigidbody> ().AddForce (0, jumpExtraAcceleration, 0);
 			}
