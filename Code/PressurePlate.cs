@@ -43,6 +43,13 @@ public class PressurePlate : Obstacle {
 
 	}
 
+	public override void atStart ()
+	{
+		foreach (TriggerTrap trap in traps) {
+			StopCoroutine (trap.trigger ());
+		}
+	}
+
 	void Update(){
 		if (isPressured || (lastTriggerTime + triggerDelay) > Time.time) {
 			plate.transform.position = Vector3.Lerp (plate.transform.position,targetPos, 0.1f);
@@ -50,5 +57,7 @@ public class PressurePlate : Obstacle {
 			plate.transform.position = Vector3.Lerp (plate.transform.position, startPos, 0.1f);
 		}
 	}
+
+
 
 }

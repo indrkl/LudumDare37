@@ -8,5 +8,4 @@ public abstract class Obstacle : MonoBehaviour {
 	public virtual void atStart(){
 
 	}
-
 }

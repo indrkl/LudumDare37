@@ -41,6 +41,10 @@ public class GameMaster : MonoBehaviour {
 			}
 		}
 
+		foreach (Dart d in GameObject.FindObjectsOfType(typeof(Dart))) {
+			Destroy (d.gameObject);
+		}
+
 		player.transform.position = playerSpawn.position;
 		player.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 	}
