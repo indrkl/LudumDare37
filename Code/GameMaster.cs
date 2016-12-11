@@ -51,6 +51,8 @@ public class GameMaster : MonoBehaviour {
 
 		if (!startMaxLevel) {
 			AudioController.instance.startLevel (levelNumber);
+		} else {
+			AudioController.instance.playStartMaxLevel ();
 		}
 	}
 
