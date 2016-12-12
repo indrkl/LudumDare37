@@ -16,6 +16,8 @@ public class GameMaster : MonoBehaviour {
 	public int maxLevel;
 	public int curLevel;
 
+	bool doingMax;
+
 	public float gravity;
 
 	public Player player;
@@ -25,7 +27,8 @@ public class GameMaster : MonoBehaviour {
 
 	public void InitializeGame (){
 		deathCounter = 0;
-		curLevel = 9;
+		curLevel = 1;
+		doingMax = true;
 		StartLevel (maxLevel-1, true);
 		obstacles.RemoveRange (0, obstacles.Count);
 		foreach (Obstacle o in GameObject.FindObjectsOfType(typeof(Obstacle))) {
@@ -64,6 +67,7 @@ public class GameMaster : MonoBehaviour {
 	public int deathCounter;
 
 	public void OnDeath(){
+		doingMax = false;
 		deathCounter++;
 		StartCoroutine (startLevelInSecs (2.0f));
 	}
@@ -80,6 +84,10 @@ public class GameMaster : MonoBehaviour {
 	}
 
 	public void OnSuccess(){
+		if (doingMax && curLevel == 1) {
+			curLevel = maxLevel - 1;
+			doingMax = false;
+		}
 		curLevel++;
 		if (curLevel > maxLevel) {
 			WinGame ();

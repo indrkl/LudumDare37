@@ -7,6 +7,10 @@ public class Player : MonoBehaviour {
 	public float crouchHeight;
 	public float standHeight;
 
+	public float maxWallJumpFuel;
+	public float curWallJumpFuel;
+	public float walljumpAcc;
+
 	public Animator anim;
 
 	bool isCrounching = false;
@@ -72,7 +76,7 @@ public class Player : MonoBehaviour {
 		if (!dead) {
 			sample (Vector3.Distance (Vector3.zero, GetComponent<Rigidbody> ().velocity));
 
-			float volume = Mathf.Min (1, getAverage() / 5);
+			float volume = Mathf.Max(0.2f, Mathf.Min (1, getAverage() / 5));
 			GetComponent<AudioSource> ().volume = volume;
 			float verticalSpeed = GetComponent<Rigidbody> ().velocity.y;
 			float verticalDiff = Mathf.Abs (verticalSpeed - lastVerticalSpeed);
@@ -88,6 +92,7 @@ public class Player : MonoBehaviour {
 						anim.SetBool ("jump", false);
 				}
 				grounded = true;
+				curWallJumpFuel = maxWallJumpFuel;
 			}
 			bool left = false;
 			bool right = false;
@@ -140,11 +145,13 @@ public class Player : MonoBehaviour {
 						anim.SetBool ("crouch", true);
 				}
 			} else if (isCrounching) {
-				GetComponent<CapsuleCollider> ().height = standHeight;
-				ninja.transform.localPosition = Vector3.zero;
-				isCrounching = false;
-				if (anim)
-					anim.SetBool ("crouch", false);
+				if (!Physics.Raycast(transform.position + Vector3.up, Vector3.up,0.5f)){
+					GetComponent<CapsuleCollider> ().height = standHeight;
+					ninja.transform.localPosition = Vector3.zero;
+					isCrounching = false;
+					if (anim)
+						anim.SetBool ("crouch", false);
+				}
 			}
 
 			if (right && !left) {
@@ -167,6 +174,10 @@ public class Player : MonoBehaviour {
 						GetComponent<AudioSource> ().Play ();
 					}
 				} else {
+					if((Physics.Raycast(transform.position + Vector3.up*0.5f, Vector3.left,0.5f) ||Physics.Raycast(transform.position + Vector3.up*0.5f, Vector3.right,0.5f)) && curWallJumpFuel > 0){
+						curWallJumpFuel -= Time.deltaTime * walljumpAcc;
+						GetComponent<Rigidbody> ().AddForce (0, Time.deltaTime * walljumpAcc - (Mathf.Min(0, curWallJumpFuel)), 0);
+					}
 					GetComponent<Rigidbody> ().AddForce (0, jumpExtraAcceleration, 0);
 				}
 			}
