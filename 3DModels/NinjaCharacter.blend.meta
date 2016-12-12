@@ -90,6 +90,13 @@ ModelImporter:
     4300000: Cube
     7400000: Default Take
     7400002: Ninja_RigAction
+    7400004: Action
+    7400006: Action_003
+    7400008: Action_005
+    7400010: CrouchIdle
+    7400012: NinjaCrouch
+    7400014: NinjaJumpStart__
+    7400016: NinjaJumpStart___001
     9500000: //RootNode
     13700000: Cube
   materials:
