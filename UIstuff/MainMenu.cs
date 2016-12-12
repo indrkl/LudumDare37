@@ -10,6 +10,10 @@ public class MainMenu : MonoBehaviour {
 		SceneManager.LoadScene (gameSceneName);
 	}
 
+	public void credits(){
+		SceneManager.LoadScene ("credits");
+	}
+
 	void Update(){
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			Application.Quit ();
