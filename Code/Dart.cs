@@ -36,9 +36,9 @@ public class Dart : MonoBehaviour {
 		} else if (direction == -1) {
 			transform.rotation = Quaternion.Euler (90, 90, 0);
 		} else if (yDirection == 1) {
-			transform.rotation = Quaternion.Euler (0, 90, 0);
-		} else if (yDirection == -1) {
 			transform.rotation = Quaternion.Euler (180, 90, 0);
+		} else if (yDirection == -1) {
+			transform.rotation = Quaternion.Euler (0, 90, 0);
 		}
 	}
 
@@ -53,10 +53,10 @@ public class Dart : MonoBehaviour {
 			}
 		}
 		float dist = Mathf.Abs (GameMaster.instance.player.transform.position.x - transform.position.x);
-		if (dist < 5 && !whoosh) {
+		/*if (dist < 8 && !whoosh) {
 			if (GetComponent<AudioSource> ())
 				GetComponent<AudioSource> ().Play ();
 			whoosh = true;
-		}
+		}*/
 	}
 }

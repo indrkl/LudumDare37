@@ -34,15 +34,46 @@ public class Player : MonoBehaviour {
 
 	float lastVerticalSpeed = 0;
 
+	float[] speedStats;
+	int statIndex = 0;
+
+	void resetStats(){
+		speedStats = new float[10];
+		for (int i = 0; i < 10; i++) {
+			speedStats [i] = 0;
+		}
+	}
+
+	void sample(float velocity){
+		if (statIndex >= 10)
+			statIndex = 0;
+		speedStats [statIndex] = velocity;
+		statIndex++;
+	}
+
+	float getAverage(){
+		float sum = 0;
+		for (int i = 0; i < 10; i++) {
+			sum += speedStats [i];
+		}
+		return sum / 10;
+	}
+
 	// Use this for initialization
 	void Start () {
-		
+		resetStats ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		float curSpeed = GetComponent<Rigidbody> ().velocity.x;
+		float acc = acceleration;
+
 		if (!dead) {
-			float curSpeed = GetComponent<Rigidbody> ().velocity.x;
+			sample (Vector3.Distance (Vector3.zero, GetComponent<Rigidbody> ().velocity));
+
+			float volume = Mathf.Min (1, getAverage() / 5);
+			GetComponent<AudioSource> ().volume = volume;
 			float verticalSpeed = GetComponent<Rigidbody> ().velocity.y;
 			float verticalDiff = Mathf.Abs (verticalSpeed - lastVerticalSpeed);
 			bool moving = false;
@@ -58,7 +89,6 @@ public class Player : MonoBehaviour {
 				}
 				grounded = true;
 			}
-			float acc = acceleration;
 			bool left = false;
 			bool right = false;
 			if (!grounded) {
@@ -104,11 +134,17 @@ public class Player : MonoBehaviour {
 			if (Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.DownArrow)) {
 				if (!isCrounching) {
 					isCrounching = true;
+					ninja.transform.localPosition = new Vector3 (0, 0.2f, 0);
 					GetComponent<CapsuleCollider> ().height = crouchHeight;
+					if (anim)
+						anim.SetBool ("crouch", true);
 				}
 			} else if (isCrounching) {
 				GetComponent<CapsuleCollider> ().height = standHeight;
+				ninja.transform.localPosition = Vector3.zero;
 				isCrounching = false;
+				if (anim)
+					anim.SetBool ("crouch", false);
 			}
 
 			if (right && !left) {
@@ -119,7 +155,7 @@ public class Player : MonoBehaviour {
 			}
 
 
-			if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) {
+			if ((Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) && !isCrounching) {
 				if (grounded && (Time.time - lastJump) > jumpDelay) {
 					GetComponent<Rigidbody> ().AddForce (0, jumpForce, 0);
 					lastJump = Time.time;
@@ -146,20 +182,24 @@ public class Player : MonoBehaviour {
 	bool dead = false;
 
 	public void die(AudioClip deathClip = null){
-		GameMaster.instance.OnDeath ();
-		if (anim)
-			anim.SetBool ("death", true);
-		if (deathClip && GetComponent<AudioSource> ()) {
-			GetComponent<AudioSource> ().clip = deathClip;
-			GetComponent<AudioSource> ().loop = false;
-			GetComponent<AudioSource> ().Play ();
+		if (!dead) {
+			GameMaster.instance.OnDeath ();
+			if (anim)
+				anim.SetBool ("death", true);
+			if (deathClip && GetComponent<AudioSource> ()) {
+				GetComponent<AudioSource> ().volume = 1;
+				GetComponent<AudioSource> ().clip = deathClip;
+				GetComponent<AudioSource> ().loop = false;
+				GetComponent<AudioSource> ().Play ();
+			}
+			dead = true;
 		}
-		dead = true;
 	}
 
 	public void resurrectPlayer(){
 		if (anim)
 			anim.SetBool ("death", false);
 		dead = false;
+		resetStats ();
 	}
 }
