@@ -90,6 +90,13 @@ ModelImporter:
     4300000: Cube
     7400000: Default Take
     7400002: Ninja_RigAction
+    7400004: Action
+    7400006: Action_003
+    7400008: Action_005
+    7400010: CrouchIdle
+    7400012: NinjaCrouch
+    7400014: NinjaJumpStart__
+    7400016: NinjaJumpStart___001
     9500000: //RootNode
     13700000: Cube
   materials:
@@ -112,7 +119,997 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Empty
+        weight: 1
+      - path: Ninja_Rig
+        weight: 1
+      - path: Ninja_Rig/MCH_Base
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_001
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_002
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_003
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L/DEF_Foot_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L/DEF_Toes_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R/DEF_Foot_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R/DEF_Toes_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Finger_Middle1_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Finger_Middle1_L/DEF_Finger_Middle2_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Thumb1_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Thumb1_L/DEF_Thumb2_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Finger_Middle1_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Finger_Middle1_R/DEF_Finger_Middle2_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Thumb1_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Thumb1_R/DEF_Thumb2_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Neck
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Neck/DEF_Head
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_L/DEF_Shin_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_R/DEF_Shin_R
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Action
+      takeName: Action
+      firstFrame: -1
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Empty
+        weight: 1
+      - path: Ninja_Rig
+        weight: 1
+      - path: Ninja_Rig/MCH_Base
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_001
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_002
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_003
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L/DEF_Foot_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L/DEF_Toes_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R/DEF_Foot_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R/DEF_Toes_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Finger_Middle1_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Finger_Middle1_L/DEF_Finger_Middle2_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Thumb1_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Thumb1_L/DEF_Thumb2_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Finger_Middle1_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Finger_Middle1_R/DEF_Finger_Middle2_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Thumb1_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Thumb1_R/DEF_Thumb2_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Neck
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Neck/DEF_Head
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_L/DEF_Shin_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_R/DEF_Shin_R
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Action_003
+      takeName: Action_003
+      firstFrame: -1
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Empty
+        weight: 1
+      - path: Ninja_Rig
+        weight: 1
+      - path: Ninja_Rig/MCH_Base
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_001
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_002
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_003
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L/DEF_Foot_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L/DEF_Toes_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R/DEF_Foot_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R/DEF_Toes_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Finger_Middle1_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Finger_Middle1_L/DEF_Finger_Middle2_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Thumb1_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Thumb1_L/DEF_Thumb2_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Finger_Middle1_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Finger_Middle1_R/DEF_Finger_Middle2_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Thumb1_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Thumb1_R/DEF_Thumb2_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Neck
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Neck/DEF_Head
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_L/DEF_Shin_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_R/DEF_Shin_R
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Action_005
+      takeName: Action_005
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Empty
+        weight: 1
+      - path: Ninja_Rig
+        weight: 1
+      - path: Ninja_Rig/MCH_Base
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_001
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_002
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_003
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L/DEF_Foot_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L/DEF_Toes_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R/DEF_Foot_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R/DEF_Toes_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Finger_Middle1_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Finger_Middle1_L/DEF_Finger_Middle2_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Thumb1_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Thumb1_L/DEF_Thumb2_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Finger_Middle1_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Finger_Middle1_R/DEF_Finger_Middle2_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Thumb1_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Thumb1_R/DEF_Thumb2_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Neck
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Neck/DEF_Head
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_L/DEF_Shin_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_R/DEF_Shin_R
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CrouchIdle
+      takeName: CrouchIdle
+      firstFrame: 0
+      lastFrame: 26
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Empty
+        weight: 1
+      - path: Ninja_Rig
+        weight: 1
+      - path: Ninja_Rig/MCH_Base
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_001
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_002
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_003
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L/DEF_Foot_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L/DEF_Toes_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R/DEF_Foot_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R/DEF_Toes_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Finger_Middle1_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Finger_Middle1_L/DEF_Finger_Middle2_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Thumb1_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Thumb1_L/DEF_Thumb2_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Finger_Middle1_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Finger_Middle1_R/DEF_Finger_Middle2_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Thumb1_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Thumb1_R/DEF_Thumb2_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Neck
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Neck/DEF_Head
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_L/DEF_Shin_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_R/DEF_Shin_R
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Ninja_RigAction
+      takeName: Ninja_RigAction
+      firstFrame: 0
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Empty
+        weight: 1
+      - path: Ninja_Rig
+        weight: 1
+      - path: Ninja_Rig/MCH_Base
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_001
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_002
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_003
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L/DEF_Foot_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L/DEF_Toes_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R/DEF_Foot_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R/DEF_Toes_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Finger_Middle1_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Finger_Middle1_L/DEF_Finger_Middle2_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Thumb1_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Thumb1_L/DEF_Thumb2_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Finger_Middle1_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Finger_Middle1_R/DEF_Finger_Middle2_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Thumb1_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Thumb1_R/DEF_Thumb2_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Neck
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Neck/DEF_Head
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_L/DEF_Shin_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_R/DEF_Shin_R
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: NinjaCrouch
+      takeName: NinjaCrouch
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Empty
+        weight: 1
+      - path: Ninja_Rig
+        weight: 1
+      - path: Ninja_Rig/MCH_Base
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_001
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_002
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_003
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L/DEF_Foot_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L/DEF_Toes_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R/DEF_Foot_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R/DEF_Toes_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Finger_Middle1_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Finger_Middle1_L/DEF_Finger_Middle2_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Thumb1_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Thumb1_L/DEF_Thumb2_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Finger_Middle1_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Finger_Middle1_R/DEF_Finger_Middle2_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Thumb1_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Thumb1_R/DEF_Thumb2_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Neck
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Neck/DEF_Head
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_L/DEF_Shin_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_R/DEF_Shin_R
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: NinjaJumpStart__
+      takeName: NinjaJumpStart__
+      firstFrame: 0
+      lastFrame: 5
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Empty
+        weight: 1
+      - path: Ninja_Rig
+        weight: 1
+      - path: Ninja_Rig/MCH_Base
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_001
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_002
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_003
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L/DEF_Foot_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L/DEF_Toes_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R/DEF_Foot_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R/DEF_Toes_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Finger_Middle1_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Finger_Middle1_L/DEF_Finger_Middle2_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Thumb1_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Thumb1_L/DEF_Thumb2_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Finger_Middle1_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Finger_Middle1_R/DEF_Finger_Middle2_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Thumb1_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Thumb1_R/DEF_Thumb2_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Neck
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Neck/DEF_Head
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_L/DEF_Shin_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_R/DEF_Shin_R
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: NinjaJumpStart___001
+      takeName: NinjaJumpStart___001
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Empty
+        weight: 1
+      - path: Ninja_Rig
+        weight: 1
+      - path: Ninja_Rig/MCH_Base
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_001
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_002
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/Bone_003
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L/DEF_Foot_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_L/DEF_Toes_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R/DEF_Foot_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Heel_R/DEF_Toes_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Finger_Middle1_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Finger_Middle1_L/DEF_Finger_Middle2_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Thumb1_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_L/DEF_Arm_Upper_L/DEF_Arm_Lower_L/DEF_Hand_L/DEF_Thumb1_L/DEF_Thumb2_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Finger_Middle1_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Finger_Middle1_R/DEF_Finger_Middle2_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Thumb1_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Collar_R/DEF_Arm_Upper_R/DEF_Arm_Lower_R/DEF_Hand_R/DEF_Thumb1_R/DEF_Thumb2_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Neck
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Spine1/DEF_Spine2/DEF_Neck/DEF_Head
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_L/DEF_Shin_L
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_R
+        weight: 1
+      - path: Ninja_Rig/MCH_Base/MCH_Hips/DEF_Hips/DEF_Thigh_R/DEF_Shin_R
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []

@@ -25,7 +25,7 @@ public class GameMaster : MonoBehaviour {
 
 	public void InitializeGame (){
 		deathCounter = 0;
-		curLevel = 1;
+		curLevel = 9;
 		StartLevel (maxLevel-1, true);
 		obstacles.RemoveRange (0, obstacles.Count);
 		foreach (Obstacle o in GameObject.FindObjectsOfType(typeof(Obstacle))) {
